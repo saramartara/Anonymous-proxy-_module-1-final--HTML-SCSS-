@@ -1,5 +1,5 @@
 .header {
-  background: no-repeat center url("../images/cover.jpg");
+  background: no-repeat top url("../images/cover.jpg");
   width: 100vw;
   height: 100vh;
 
@@ -41,5 +41,5 @@
   width: 45px;
   border-radius: 50%;
   position: relative;
-  bottom: -50%;
+  top: 10%;
 }
