@@ -1,7 +1,56 @@
-// body {
-//   padding: 2rem;
-//   height: 100vh;
-//   background-image: url('../images/bg-adalab.png');
-//   background-color: $color-bg;
-//   font-family: $font-main;
-// }
+@mixin Font-normal() {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  @content;
+}
+@mixin centralColumn() {
+  background-color: pink;
+  padding: 0 15px;
+  @content;
+}
+.looking {
+  @include centralColumn();
+}
+
+.looking__title--small {
+  font-family: $font-main;
+  color: #8ccbea;
+  size: 14px;
+  line-height: 30px;
+  text-transform: capitalize;
+  @include Font-normal();
+  display: inline-block;
+  padding-top: 30px;
+}
+@mixin Title-main() {
+  font-family: $font-title;
+  color: $color-text;
+  font-size: 24px;
+  text-transform: capitalize;
+  @include Font-normal() {
+    font-weight: bold;
+  }
+}
+.looking__title {
+  @include Title-main();
+}
+.looking__text {
+  font-family: $font-main;
+  color: $color-text-secondary;
+  font-size: 18px;
+  @include Font-normal();
+  padding: 15px 0 30px 0;
+}
+.looking__icon {
+  height: 45px;
+  width: 76px;
+  border: 2px $color-button solid;
+  border-radius: 22.5px;
+  padding: 0 25px 0 26px;
+  font-family: $font-main;
+  color: $color-button;
+  size: 20px;
+  text-decoration: none;
+}
