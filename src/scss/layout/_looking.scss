@@ -10,8 +10,19 @@
   padding: 0 15px;
   @content;
 }
+@mixin Title-main() {
+  font-family: $font-title;
+  color: $color-text;
+  font-size: 24px;
+  text-transform: capitalize;
+  @include Font-normal() {
+    font-weight: bold;
+  }
+}
 .looking {
   @include centralColumn();
+  padding-bottom: 45px;
+  background-color: $color-bg;
 }
 
 .looking__title--small {
@@ -24,15 +35,7 @@
   display: inline-block;
   padding-top: 30px;
 }
-@mixin Title-main() {
-  font-family: $font-title;
-  color: $color-text;
-  font-size: 24px;
-  text-transform: capitalize;
-  @include Font-normal() {
-    font-weight: bold;
-  }
-}
+
 .looking__title {
   @include Title-main();
 }
