@@ -21,89 +21,89 @@
       padding: 0 83px;
     }
   }
-}
-.reasons__item1 {
-  grid-row: 1 / 2;
-  @include tablet() {
-    grid-column: 1 / 4;
+  &__item1 {
+    grid-row: 1 / 2;
+    @include tablet() {
+      grid-column: 1 / 4;
+    }
   }
-}
-.reasons__item2 {
-  grid-row: 2 / 3;
-  margin: 22.5px 55px;
-  @include tablet() {
-    grid-column: 1 / 2;
-  }
-}
-.reasons__item3 {
-  grid-row: 3 / 4;
-  margin: 22.5px 55px;
-  @include tablet() {
-    grid-column: 2 / 3;
+  &__item2 {
     grid-row: 2 / 3;
+    margin: 22.5px 55px;
+    @include tablet() {
+      grid-column: 1 / 2;
+    }
   }
-}
-.reasons__item4 {
-  grid-row: 4 / 5;
-  margin: 22.5px 55px;
-  @include tablet() {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-  }
-}
-.reasons__item5 {
-  grid-row: 5 / 6;
-  @include tablet() {
-    grid-column: 1 / 4;
+  &__item3 {
     grid-row: 3 / 4;
+    margin: 22.5px 55px;
+    @include tablet() {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
   }
-}
-.reasons--mainTitle {
-  @include Title-main();
-  @include tablet() {
-    font-size: 26px;
+  &__item4 {
+    grid-row: 4 / 5;
+    margin: 22.5px 55px;
+    @include tablet() {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
   }
-  @include desktop() {
-    font-size: 32px;
+  &__item5 {
+    grid-row: 5 / 6;
+    @include tablet() {
+      grid-column: 1 / 4;
+      grid-row: 3 / 4;
+    }
   }
-}
-.reasons--title {
-  font-family: $font-title;
-  color: $color-text;
-  font-size: 18px;
-  @include Font-normal() {
-    font-weight: bold;
+  &--mainTitle {
+    @include titleMain();
+    @include tablet() {
+      font-size: 26px;
+    }
+    @include desktop() {
+      font-size: 32px;
+    }
   }
-  @include tablet() {
-    font-size: 24px;
+  &--title {
+    font-family: $font-title;
+    color: $color-text;
+    font-size: 18px;
+    @include fontNormal() {
+      font-weight: bold;
+    }
+    @include tablet() {
+      font-size: 24px;
+    }
   }
-}
-.reasons--text {
-  font-family: $font-main;
-  color: $color-text;
-  font-size: 18px;
-  @include Font-normal();
-  @include tablet() {
+  &--text {
+    font-family: $font-main;
+    color: $color-text;
+    font-size: 18px;
+    @include fontNormal();
+    @include tablet() {
+      font-size: 20px;
+    }
+  }
+  &--button {
+    height: 124px;
+    width: 184px;
+    margin-bottom: 60px;
+    border-radius: 22.5px;
+    border: none;
+    padding: 10px 30px;
+    background: $color-button;
+    font-family: $font-main;
+    color: $color-text-negative;
     font-size: 20px;
-  }
-}
-.reasons--button {
-  height: 124px;
-  width: 184px;
-  margin-bottom: 60px;
-  border-radius: 22.5px;
-  border: none;
-  padding: 10px 30px;
-  background: $color-button;
-  font-family: $font-main;
-  color: $color-text-negative;
-  font-size: 20px;
-  text-decoration: none;
-  &:hover {
-    color: $color-button;
-    background-color: $color-bg;
-    border: $color-button 2px solid;
-    font-weight: bold;
-    transition: background-color ease 1s, color ease 0.5s;
+    text-decoration: none;
+    &:hover {
+      color: $color-button;
+      background-color: $color-bg;
+      border: $color-button 2px solid;
+      font-weight: bold;
+      transition: background-color ease 1s, color ease 0.5s;
+    }
   }
 }

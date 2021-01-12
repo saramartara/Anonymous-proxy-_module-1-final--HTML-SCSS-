@@ -1,24 +1,9 @@
-@mixin Font-normal() {
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: normal;
-  @content;
-}
 @mixin centralColumn() {
-  // background-color: pink;
   padding: 0 15px;
   @content;
 }
-@mixin Title-main() {
-  font-family: $font-title;
-  color: $color-text;
-  font-size: 24px;
-  text-transform: capitalize;
-  @include Font-normal() {
-    font-weight: bold;
-  }
-}
+
+// STYLES LOOKING SECTION
 .looking {
   @include centralColumn();
   padding-bottom: 45px;
@@ -33,55 +18,54 @@
       padding: 0 275px 60px 275px;
     }
   }
-}
-
-.looking__title--small {
-  font-family: $font-main;
-  color: #8ccbea;
-  font-size: 14px;
-  line-height: 30px;
-  text-transform: capitalize;
-  @include Font-normal();
-  display: inline-block;
-  padding-top: 30px;
-  @include desktop() {
-    font-size: 16px;
+  &__title--small {
+    font-family: $font-main;
+    color: #8ccbea;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: capitalize;
+    @include fontNormal();
+    display: inline-block;
+    padding-top: 30px;
+    @include desktop() {
+      font-size: 16px;
+    }
   }
-}
-
-.looking__title {
-  @include Title-main();
-  @include tablet() {
-    font-size: 26px;
+  &__title {
+    @include titleMain();
+    @include tablet() {
+      font-size: 26px;
+    }
+    @include desktop() {
+      font-size: 32px;
+    }
   }
-  @include desktop();
-  font-size: 32px;
-}
-.looking__text {
-  font-family: $font-main;
-  color: $color-text-secondary;
-  font-size: 18px;
-  @include Font-normal();
-  padding: 15px 0 30px 0;
-  @include tablet() {
+  &__text {
+    font-family: $font-main;
+    color: $color-text-secondary;
+    font-size: 18px;
+    @include fontNormal();
+    padding: 15px 0 30px 0;
+    @include tablet() {
+      font-size: 20px;
+    }
+  }
+  &__icon {
+    height: 45px;
+    width: 76px;
+    border: 2px $color-button solid;
+    border-radius: 22.5px;
+    padding: 0 25px 0 26px;
+    background-color: $color-bg;
+    font-family: $font-main;
+    color: $color-button;
     font-size: 20px;
-  }
-}
-.looking__icon {
-  height: 45px;
-  width: 76px;
-  border: 2px $color-button solid;
-  border-radius: 22.5px;
-  padding: 0 25px 0 26px;
-  background-color: $color-bg;
-  font-family: $font-main;
-  color: $color-button;
-  font-size: 20px;
-  text-decoration: none;
-  &:hover {
-    color: $color-bg;
-    background-color: $color-button;
-    font-weight: bold;
-    transition: color ease 1s, background-color ease 0.5s;
+    text-decoration: none;
+    &:hover {
+      color: $color-bg;
+      background-color: $color-button;
+      font-weight: bold;
+      transition: color ease 1s, background-color ease 0.5s;
+    }
   }
 }

@@ -1,3 +1,19 @@
+@mixin fontNormal() {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  @content;
+}
+@mixin titleMain() {
+  font-family: $font-title;
+  color: $color-text;
+  font-size: 24px;
+  text-transform: capitalize;
+  @include fontNormal() {
+    font-weight: bold;
+  }
+}
 @mixin tablet() {
   @media all and (min-width: 768px) {
     @content;
@@ -9,13 +25,16 @@
   }
 }
 
+// STYLES HEADER SECTION
+
 .header {
-  background-image: url("../images/cover.jpg");
+  background-image: url($pathImages + "cover.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100vh;
 
+  // Button burguer menu
   &__button--burguer {
     background-color: #0271bc;
     width: 44px;
@@ -24,47 +43,51 @@
     border: none;
     z-index: 1;
   }
-}
-.header__container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.header__title {
-  color: $color-text-negative;
-  font-family: $font-title;
-  font-weight: bold;
-  font-size: 42px;
-  text-transform: uppercase;
-  @include tablet() {
-    font-size: 80px;
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  @include desktop() {
-    font-size: 100px;
+  &__title {
+    color: $color-text-negative;
+    font-family: $font-title;
+    font-size: 42px;
+    text-transform: uppercase;
+    @include fontNormal() {
+      font-weight: bold;
+    }
+
+    @include tablet() {
+      font-size: 80px;
+    }
+    @include desktop() {
+      font-size: 100px;
+    }
+    &--item {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
   }
-}
-.header__title--item {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: center;
-}
-.header__subtitle {
-  color: $color-text-negative;
-  font-family: $font-main;
-  font-size: 16px;
-  @include tablet() {
-    font-size: 24px;
+  &__subtitle {
+    color: $color-text-negative;
+    font-family: $font-main;
+    font-size: 16px;
+    @include fontNormal();
+    @include tablet() {
+      font-size: 24px;
+    }
   }
-}
-.header__button--scrollDown {
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  background-color: $color-bg;
-  position: relative;
-  top: 10%;
-  border: none;
+  &__button--scrollDown {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: $color-bg;
+    position: relative;
+    top: 10%;
+    border: none;
+  }
 }

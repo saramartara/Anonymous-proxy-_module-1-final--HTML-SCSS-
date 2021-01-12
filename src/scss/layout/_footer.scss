@@ -16,63 +16,62 @@
   @include desktop() {
     padding: 60px 270px 45px 270px;
   }
-}
-.footer__button--scrollUp {
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  background-color: $color-bg;
-  box-shadow: 0 2px 4px 0 $shadow-button;
-  position: absolute;
-  top: -7%;
-  @include tablet() {
-    left: 50%;
-  }
-}
-.footer__menu,
-.footer__media,
-.footer__copy {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 30px;
-  line-height: 1.88;
-  @include Font-normal();
-  @include tablet() {
-    align-items: stretch;
-  }
-  &--link {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: $color-text-negative;
-    font-family: $font-main;
-    font-size: 16px;
-    &:hover {
-      text-decoration: underline;
+  &__button--scrollUp {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: $color-bg;
+    box-shadow: 0 2px 4px 0 $shadow-button;
+    position: absolute;
+    top: -7%;
+    @include tablet() {
+      left: 50%;
     }
   }
-}
-
-.footer__copy {
-  padding: 4px;
-  margin-bottom: 45px;
-  @include tablet() {
-    order: -1;
+  &__menu,
+  &__media,
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    line-height: 1.88;
+    @include fontNormal();
+    @include tablet() {
+      align-items: stretch;
+    }
+    &--link {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-text-negative;
+      font-family: $font-main;
+      font-size: 16px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
-  &--item {
-    color: $color-text-negative;
-    font-family: $font-main;
-    font-size: 14px;
-    padding-top: 10px;
-  }
-  &--icon {
-    padding: 0 1px;
+  &__copy {
+    padding: 4px;
     margin-bottom: 45px;
-    font-family: ZapfDingbatsITC;
-    color: $color-button;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
+    @include tablet() {
+      order: -1;
+    }
+    &--item {
+      color: $color-text-negative;
+      font-family: $font-main;
+      font-size: 14px;
+      padding-top: 10px;
+    }
+    &--icon {
+      padding: 0 1px;
+      margin-bottom: 45px;
+      font-family: ZapfDingbatsITC;
+      color: $color-button;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+    }
   }
 }
