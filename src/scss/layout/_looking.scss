@@ -6,7 +6,7 @@
   @content;
 }
 @mixin centralColumn() {
-  background-color: pink;
+  // background-color: pink;
   padding: 0 15px;
   @content;
 }
@@ -25,12 +25,12 @@
   background-color: $color-bg;
   @include tablet() {
     @include centralColumn() {
-      padding: 39px;
+      padding: 0 39px;
     }
   }
   @include desktop() {
     @include centralColumn() {
-      padding: 275px;
+      padding: 0 275px;
     }
   }
 }

@@ -8,27 +8,64 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  @include tablet() {
+    @include centralColumn() {
+      padding: 0 39px;
+    }
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  @include desktop() {
+    @include centralColumn() {
+      padding: 0 83px;
+    }
+  }
 }
 .reasons__item1 {
   grid-row: 1 / 2;
+  @include tablet() {
+    grid-column: 1 / 4;
+  }
 }
 .reasons__item2 {
   grid-row: 2 / 3;
   margin: 22.5px 55px;
+  @include tablet() {
+    grid-column: 1 / 2;
+  }
 }
 .reasons__item3 {
   grid-row: 3 / 4;
   margin: 22.5px 55px;
+  @include tablet() {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
 }
 .reasons__item4 {
   grid-row: 4 / 5;
   margin: 22.5px 55px;
+  @include tablet() {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
 }
 .reasons__item5 {
   grid-row: 5 / 6;
+  @include tablet() {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+  }
 }
 .reasons--mainTitle {
   @include Title-main();
+  @include tablet() {
+    font-size: 26px;
+  }
+  @include desktop() {
+    font-size: 32px;
+  }
 }
 .reasons--title {
   font-family: $font-title;
@@ -37,16 +74,23 @@
   @include Font-normal() {
     font-weight: bold;
   }
+  @include tablet() {
+    font-size: 24px;
+  }
 }
 .reasons--text {
   font-family: $font-main;
   color: $color-text;
   font-size: 18px;
   @include Font-normal();
+  @include tablet() {
+    font-size: 20px;
+  }
 }
 .reasons--button {
   height: 124px;
   width: 184px;
+  margin-bottom: 60px;
   border-radius: 22.5px;
   border: none;
   padding: 10px 30px;
