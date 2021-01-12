@@ -53,6 +53,13 @@
   background: $color-button;
   font-family: $font-main;
   color: $color-text-negative;
-  size: 20px;
+  font-size: 20px;
   text-decoration: none;
+  &:hover {
+    color: $color-button;
+    background-color: $color-bg;
+    border: $color-button 2px solid;
+    font-weight: bold;
+    transition: background-color ease 1s, color ease 0.5s;
+  }
 }

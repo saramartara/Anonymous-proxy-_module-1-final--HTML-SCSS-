@@ -52,8 +52,15 @@
   border: 2px $color-button solid;
   border-radius: 22.5px;
   padding: 0 25px 0 26px;
+  background-color: $color-bg;
   font-family: $font-main;
   color: $color-button;
-  size: 20px;
+  font-size: 20px;
   text-decoration: none;
+  &:hover {
+    color: $color-bg;
+    background-color: $color-button;
+    font-weight: bold;
+    transition: color ease 1s, background-color ease 0.5s;
+  }
 }
