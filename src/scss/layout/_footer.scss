@@ -1,9 +1,11 @@
 .footer {
   @include centralColumn();
+  background-color: $color-bg-complementary;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  padding-top: 60px;
 }
 .footer__button--scrollUp {
   height: 45px;
@@ -12,5 +14,31 @@
   background-color: $color-bg;
   box-shadow: 0 2px 4px 0 $shadow-button;
   position: absolute;
-  top: -14%;
+  top: -7%;
+}
+.footer__menu,
+.footer__media,
+.footer__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 0 30px 0;
+  @include Font-normal();
+  &--link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-text-negative;
+    font-family: $font-main;
+    font-size: 16px;
+  }
+  &--item {
+    color: $color-text-negative;
+    font-family: $font-main;
+    font-size: 14px;
+  }
+  &--icon {
+    color: $color-button;
+    text-decoration: none;
+  }
 }
