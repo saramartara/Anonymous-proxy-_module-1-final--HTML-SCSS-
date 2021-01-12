@@ -25,12 +25,12 @@
   background-color: $color-bg;
   @include tablet() {
     @include centralColumn() {
-      padding: 0 39px;
+      padding: 0 39px 60px 39px;
     }
   }
   @include desktop() {
     @include centralColumn() {
-      padding: 0 275px;
+      padding: 0 275px 60px 275px;
     }
   }
 }
