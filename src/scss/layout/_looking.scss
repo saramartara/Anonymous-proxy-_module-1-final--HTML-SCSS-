@@ -23,21 +23,39 @@
   @include centralColumn();
   padding-bottom: 45px;
   background-color: $color-bg;
+  @include tablet() {
+    @include centralColumn() {
+      padding: 39px;
+    }
+  }
+  @include desktop() {
+    @include centralColumn() {
+      padding: 275px;
+    }
+  }
 }
 
 .looking__title--small {
   font-family: $font-main;
   color: #8ccbea;
-  size: 14px;
+  font-size: 14px;
   line-height: 30px;
   text-transform: capitalize;
   @include Font-normal();
   display: inline-block;
   padding-top: 30px;
+  @include desktop() {
+    font-size: 16px;
+  }
 }
 
 .looking__title {
   @include Title-main();
+  @include tablet() {
+    font-size: 26px;
+  }
+  @include desktop();
+  font-size: 32px;
 }
 .looking__text {
   font-family: $font-main;
@@ -45,6 +63,9 @@
   font-size: 18px;
   @include Font-normal();
   padding: 15px 0 30px 0;
+  @include tablet() {
+    font-size: 20px;
+  }
 }
 .looking__icon {
   height: 45px;
