@@ -21,6 +21,7 @@
 
   <body class="body">
     <!-- HEADER  -->
+    <!-- HEADER SECTION  -->
     <header class="header" id="start">
       <!-- Button burguer menu  -->
       <button class="header__button--burguer">
@@ -30,15 +31,15 @@
       </button>
 
       <!-- hero  -->
-      <div class="header__container">
-        <h1 class="header__title">
-          <span class="header__title--item">Anonymous</span>
-          <span class="header__title--item">Proxy</span>
+      <section class="hero">
+        <h1 class="hero__title">
+          <span class="hero__title--item">Anonymous</span>
+          <span class="hero__title--item">Proxy</span>
         </h1>
-        <h4 class="header__subtitle">In hac habitasse platea dictumst.</h4>
+        <h4 class="hero__subtitle">In hac habitasse platea dictumst.</h4>
 
-        <!-- Button to go to 3 reasons to purchase  -->
-        <button class="header__button--scrollDown">
+        <!-- Button scroll down  -->
+        <button class="hero__button--scrollDown">
           <a href="#reasons">
             <img
               src="./assets/images/ico-scroll-down.svg"
@@ -47,7 +48,7 @@
             />
           </a>
         </button>
-      </div>
+      </section>
     </header>
 
 
@@ -69,24 +70,24 @@
       <section class="reasons" id="reasons">
         <h2 class="reasons__item1 reasons--mainTitle">3 reasons to purchase</h2>
 
-        <div class="reasons__item2">
+        <article class="reasons__item2">
           <h3 class="reasons--title">Ut sed metus</h3>
           <p class="reasons--text">Lorem ipsum dolor sit amet, consecteur.</p>
-        </div>
+        </article>
 
-        <div class="reasons__item3 2">
+        <article class="reasons__item3 2">
           <h3 class="reasons--title">Curabitur ac erat</h3>
           <p class="reasons--text">Mauris mattis urna quis lorem molestie.</p>
-        </div>
+        </article>
 
-        <div class="reasons__item4 3">
+        <article class="reasons__item4 3">
           <h3 class="reasons--title">Morbi dictum</h3>
           <p class="reasons--text">Aliquam in dolor et dolor tincidunt.</p>
-        </div>
+        </article>
 
-        <div class="reasons__item5">
+        <article class="reasons__item5">
           <a class="reasons--button" href="">More reasons</a>
-        </div>
+        </article>
       </section>
 
     </main>
@@ -153,8 +154,6 @@
         <p class="footer__copy--item">&copy 2021</p>
         <p class="footer__copy--item">
           we <i class="fa fa-heart" aria-hidden="true"></i> components>
-
-          <!-- <i class="footer__copy--icon"> ❤︎</i> components -->
         </p>
       </small>
     </footer>
