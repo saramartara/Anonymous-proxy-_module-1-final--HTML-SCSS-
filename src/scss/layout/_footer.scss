@@ -1,3 +1,19 @@
+@keyframes intro {
+  from {
+    transform: scale(3) matrix(1, 2, 3, 4, 5, 6);
+    background-color: $color-button;
+    opacity: 0;
+  }
+  30% {
+    transform: scale(2);
+    opacity: 30%;
+  }
+  60% {
+    transform: scale(0);
+    opacity: 100%;
+  }
+}
+
 .footer {
   @include centralColumn();
   background-color: $color-bg-complementary;
@@ -16,6 +32,9 @@
   @include desktop() {
     padding: 60px 270px 45px 270px;
   }
+
+  // Button with ANIMATION
+
   &__button--scrollUp {
     height: 45px;
     width: 45px;
@@ -24,6 +43,10 @@
     box-shadow: 0 2px 4px 0 $shadow-button;
     position: absolute;
     top: -7%;
+    animation-name: intro;
+    animation-duration: 3s;
+    // animation-iteration-count: 2;
+
     @include tablet() {
       left: 50%;
     }
