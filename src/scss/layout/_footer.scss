@@ -63,15 +63,10 @@
       font-size: 14px;
       padding-top: 10px;
     }
-    &--icon {
-      padding: 0 1px;
-      margin-bottom: 45px;
-      font-family: ZapfDingbatsITC;
-      color: $color-button;
-      font-size: 14px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-    }
   }
+}
+// Heart icon in copywrite
+.fa,
+.fa-heart {
+  color: $color-button;
 }
