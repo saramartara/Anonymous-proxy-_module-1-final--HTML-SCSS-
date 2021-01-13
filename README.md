@@ -30,6 +30,7 @@ Resolver algunas interacciones usando transiciones: botones Go y More reasons.�
 3. En el hover de los botones ("Go" y "3 Reasons To Purchase") transición.☑
 4. BONUS:
    - Creación de rama animation.☑
-   - Animación en el botón del footer.
+   - Animación en el botón scroll-up del footer.☑
+   - Animación "Heartbeat" en icono del footer. ☑
 
-## Feedback y correcciones bienvenidas! Gracias! :)
+## ¡Feedback y correcciones bienvenidas! ¡Gracias! :)
