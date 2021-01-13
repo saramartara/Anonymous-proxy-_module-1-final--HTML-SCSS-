@@ -1,3 +1,4 @@
+// ANIMATION scroll-up button footer
 @keyframes intro {
   from {
     transform: scale(3) matrix(1, 2, 3, 4, 5, 6);
@@ -14,6 +15,23 @@
   }
 }
 
+// ANIMATION heart icon footer
+@keyframes heartbeat {
+  from {
+    transform: scale(1.7);
+  }
+  30% {
+    transform: scale (1);
+  }
+  60% {
+    transform: scale (0.5);
+  }
+  to {
+    transform: scale (1);
+  }
+}
+
+// FOOTER Styles
 .footer {
   @include centralColumn();
   background-color: $color-bg-complementary;
@@ -33,7 +51,7 @@
     padding: 60px 270px 45px 270px;
   }
 
-  // Button with ANIMATION
+  // Button scroll-up with ANIMATION
 
   &__button--scrollUp {
     height: 45px;
@@ -45,7 +63,8 @@
     top: -7%;
     animation-name: intro;
     animation-duration: 3s;
-    // animation-iteration-count: 2;
+    // two seconds delay to have time to go see animation
+    animation-delay: 2s;
 
     @include tablet() {
       left: 50%;
@@ -88,8 +107,11 @@
     }
   }
 }
-// Heart icon in copywrite
+// Heart icon with ANIMATION
 .fa,
 .fa-heart {
   color: $color-button;
+  animation-name: heartbeat;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
