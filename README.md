@@ -29,7 +29,7 @@ Resolver algunas interacciones usando transiciones: botones Go y More reasons.�
 2. El botón de flecha del footer debe enlazar al inicio de la página.☑
 3. En el hover de los botones ("Go" y "3 Reasons To Purchase") transición.☑
 4. BONUS:
-   Creación de rama animation.☑
-   Animación en el botón del footer.
+   - Creación de rama animation.☑
+   - Animación en el botón del footer.
 
 ## Feedback y correcciones bienvenidas! Gracias! :)
