@@ -1,0 +1,23 @@
+.offer {
+  @include centralColumn();
+  background-color: $color-button;
+  display: none;
+  @include tablet() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__title {
+    padding-bottom: 10px;
+    @include tablet() {
+      width: 100%;
+    }
+  }
+  &__subtitle,
+  &__text {
+    @include tablet() {
+      width: 50%;
+    }
+  }
+}
